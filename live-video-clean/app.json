@@ -12,14 +12,28 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "plugins": [
+      "expo-barcode-scanner",
+      "expo-camera"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs camera access for video features"
+      },
+      "bundleIdentifier": "com.pickeatteam.livevideoclean"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "CAMERA",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.pickeatteam.livevideoclean"
     },
     "web": {
       "favicon": "./assets/favicon.png"
